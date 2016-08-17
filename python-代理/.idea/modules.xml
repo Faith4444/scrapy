@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../MSpider-master/.idea/MSpider-master.iml" filepath="$PROJECT_DIR$/../MSpider-master/.idea/MSpider-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../scrapy-project/localhost/.idea/localhost.iml" filepath="$PROJECT_DIR$/../scrapy-project/localhost/.idea/localhost.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/python-代理.iml" filepath="$PROJECT_DIR$/.idea/python-代理.iml" />
+    </modules>
+  </component>
+</project>
