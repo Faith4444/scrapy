@@ -1,0 +1,1657 @@
+2016-08-15 00:16:00 [scrapy] INFO: Scrapy 1.1.1 started (bot: localhost)
+2016-08-15 00:16:00 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'localhost.spiders', 'DEPTH_LIMIT': 3, 'CONCURRENT_REQUESTS': 100, 'SPIDER_MODULES': ['localhost.spiders'], 'BOT_NAME': 'localhost', 'LOG_FILE': 'scrapy.log'}
+2016-08-15 00:16:00 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats']
+2016-08-15 00:16:00 [py.warnings] WARNING: C:\Users\Faith.Faith-PC\Desktop\scrapy-project\localhost\localhost\middleware.py:8: ScrapyDeprecationWarning: Module `scrapy.contrib.downloadermiddleware.useragent` is deprecated, use `scrapy.downloadermiddlewares.useragent` instead
+  from scrapy.contrib.downloadermiddleware.useragent import UserAgentMiddleware
+
+2016-08-15 00:16:02 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14492/wd/hub/session {"requiredCapabilities": {}, "desiredCapabilities": {"phantomjs.page.settings.disk-cache": true, "javascriptEnabled": true, "phantomjs.page.settings.resourceTimeout": 1000, "phantomjs.page.settings.loadImages": false, "platform": "ANY", "browserName": "phantomjs", "version": ""}}
+2016-08-15 00:16:02 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:02 [scrapy] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'localhost.middleware.RotateUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats',
+ 'localhost.middleware.PageRresolution']
+2016-08-15 00:16:02 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2016-08-15 00:16:02 [scrapy] INFO: Enabled item pipelines:
+['localhost.pipelines.LocalhostPipeline']
+2016-08-15 00:16:02 [scrapy] INFO: Spider opened
+2016-08-15 00:16:02 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2016-08-15 00:16:02 [scrapy] ERROR: Error caught on signal handler: <bound method ?.spider_opened of <localhost.middleware.RotateUserAgentMiddleware object at 0x0000000004831208>>
+Traceback (most recent call last):
+  File "c:\python27\lib\site-packages\twisted\internet\defer.py", line 150, in maybeDeferred
+    result = f(*args, **kw)
+  File "build\bdist.win-amd64\egg\pydispatch\robustapply.py", line 55, in robustApply
+  File "c:\python27\lib\site-packages\scrapy-1.1.1-py2.7.egg\scrapy\downloadermiddlewares\useragent.py", line 19, in spider_opened
+    self.user_agent = getattr(spider, 'user_agent', self.user_agent)
+AttributeError: 'RotateUserAgentMiddleware' object has no attribute 'user_agent'
+2016-08-15 00:16:02 [scrapy] DEBUG: Telnet console listening on 127.0.0.1:6023
+2016-08-15 00:16:02 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/url {"url": "http://www.my_test_scrapy.com/ecshop", "sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:15 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:15 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/source {"sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:15 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:15 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/ecshop> (referer: None)
+2016-08-15 00:16:15 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/ecshop>
+{'link': 'http://www.my_test_scrapy.com/ecshop'}
+2016-08-15 00:16:15 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/url {"url": "http://www.my_test_scrapy.com/category.php?id=27", "sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:15 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:15 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/source {"sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:15 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:15 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/category.php?id=27> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:16:15 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/url {"url": "http://www.my_test_scrapy.com/category.php?id=24", "sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:15 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:15 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/source {"sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:15 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:15 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/category.php?id=24> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:16:15 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/url {"url": "http://www.my_test_scrapy.com/category.php?id=25", "sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:15 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:15 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/source {"sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:15 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:15 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/category.php?id=25> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:16:15 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/url {"url": "http://www.my_test_scrapy.com/category.php?id=9", "sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:15 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:15 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/source {"sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:15 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:15 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/category.php?id=9> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:16:15 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/url {"url": "http://www.my_test_scrapy.com/category.php?id=8", "sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:15 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:15 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/source {"sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:15 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:15 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/category.php?id=8> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:16:15 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/url {"url": "http://www.my_test_scrapy.com/category.php?id=4", "sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/source {"sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/category.php?id=4> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/url {"url": "http://www.my_test_scrapy.com/category.php?id=6", "sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/source {"sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/category.php?id=6> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/url {"url": "http://www.my_test_scrapy.com/category.php?id=1", "sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/source {"sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/category.php?id=1> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/url {"url": "http://www.my_test_scrapy.com/article.php?id=14", "sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/source {"sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/article.php?id=14> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/url {"url": "http://www.my_test_scrapy.com/category.php?id=3", "sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/source {"sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/category.php?id=3> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/url {"url": "http://www.my_test_scrapy.com/affiche.php?ad_id=1&amp;uri=", "sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/source {"sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/affiche.php?ad_id=1&amp;uri=> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/url {"url": "http://www.my_test_scrapy.com/goods.php?id=69", "sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/source {"sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/goods.php?id=69> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/url {"url": "http://www.my_test_scrapy.com/goods.php?id=68", "sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/source {"sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/goods.php?id=68> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/url {"url": "http://www.my_test_scrapy.com/goods.php?id=64", "sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/source {"sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/goods.php?id=64> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/url {"url": "http://www.my_test_scrapy.com/goods.php?id=61", "sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/source {"sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/goods.php?id=61> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/url {"url": "http://www.my_test_scrapy.com/goods.php?id=63", "sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/source {"sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/goods.php?id=63> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/url {"url": "http://www.my_test_scrapy.com/goods.php?id=62", "sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/source {"sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/goods.php?id=62> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/url {"url": "http://www.my_test_scrapy.com/affiche.php?ad_id=2&amp;uri=", "sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/source {"sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/affiche.php?ad_id=2&amp;uri=> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/url {"url": "http://www.my_test_scrapy.com/article.php?id=17", "sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/source {"sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/article.php?id=17> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/url {"url": "http://www.my_test_scrapy.com/user.php", "sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/source {"sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/user.php> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/url {"url": "http://www.my_test_scrapy.com/article.php?id=15", "sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/source {"sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/article.php?id=15> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/url {"url": "http://www.my_test_scrapy.com/article.php?id=12", "sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/source {"sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/article.php?id=12> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/url {"url": "http://www.my_test_scrapy.com/article.php?id=13", "sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/source {"sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/article.php?id=13> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/url {"url": "http://www.my_test_scrapy.com/article.php?id=10", "sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/source {"sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/article.php?id=10> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/url {"url": "http://www.my_test_scrapy.com/article.php?id=11", "sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/source {"sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/article.php?id=11> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/url {"url": "http://www.my_test_scrapy.com/themes/default/js", "sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/source {"sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/themes/default/js> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/url {"url": "http://www.my_test_scrapy.com/article.php?id=18", "sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/source {"sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/article.php?id=18> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/url {"url": "http://www.my_test_scrapy.com/article.php?id=19", "sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/source {"sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/article.php?id=19> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/url {"url": "http://www.my_test_scrapy.com/category.php?id=19", "sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/source {"sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/category.php?id=19> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/url {"url": "http://www.my_test_scrapy.com/category.php?id=32", "sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/source {"sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/category.php?id=32> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/url {"url": "http://www.my_test_scrapy.com/category.php?id=16", "sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/source {"sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/category.php?id=16> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/url {"url": "http://www.my_test_scrapy.com/category.php?id=12", "sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/source {"sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/category.php?id=12> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/url {"url": "http://www.my_test_scrapy.com/flow.php", "sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/source {"sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/flow.php> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/url {"url": "http://www.my_test_scrapy.com/themes/default/images", "sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/source {"sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/themes/default/images> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/url {"url": "http://www.my_test_scrapy.com/themes/default", "sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/source {"sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/themes/default> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/url {"url": "http://www.my_test_scrapy.com/feed.php", "sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/source {"sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/feed.php> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/url {"url": "http://www.my_test_scrapy.com/article.php?id=16", "sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/source {"sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/article.php?id=16> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/url {"url": "http://www.my_test_scrapy.com/goods.php?id=72", "sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/source {"sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/goods.php?id=72> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/url {"url": "http://www.my_test_scrapy.com/goods.php?id=70", "sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/source {"sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/goods.php?id=70> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/url {"url": "http://www.my_test_scrapy.com/user.php?act=register", "sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/source {"sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/user.php?act=register> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/url {"url": "http://www.my_test_scrapy.com/category.php?id=18", "sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/source {"sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/category.php?id=18> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/url {"url": "http://www.my_test_scrapy.com/index.php", "sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/source {"sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/index.php> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/url {"url": "http://www.my_test_scrapy.com/article.php?id=20", "sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/source {"sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/article.php?id=20> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/url {"url": "http://www.my_test_scrapy.com/images/201605/thumb_img", "sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/source {"sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/images/201605/thumb_img> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/url {"url": "http://www.my_test_scrapy.com/js", "sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/source {"sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/js> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/url {"url": "http://www.my_test_scrapy.com/article.php?id=9", "sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/source {"sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/article.php?id=9> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/url {"url": "http://www.my_test_scrapy.com/data/afficheimg", "sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/source {"sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/data/afficheimg> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/url {"url": "http://www.my_test_scrapy.com/category.php?id=28", "sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/source {"sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/category.php?id=28> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/url {"url": "http://www.my_test_scrapy.com/category.php?id=29", "sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/source {"sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/category.php?id=29> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/url {"url": "http://www.my_test_scrapy.com/category.php?id=22", "sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/source {"sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/category.php?id=22> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/url {"url": "http://www.my_test_scrapy.com/search.php", "sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/source {"sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/search.php> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/url {"url": "http://www.my_test_scrapy.com/category.php?id=20", "sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/source {"sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/category.php?id=20> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/url {"url": "http://www.my_test_scrapy.com/category.php?id=26", "sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/source {"sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/category.php?id=26> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/url {"url": "http://www.my_test_scrapy.com/category.php?id=31", "sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/source {"sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/category.php?id=31> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/url {"url": "http://www.my_test_scrapy.com/category.php?id=30", "sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14492/wd/hub/session/653c88b0-623a-11e6-b94a-e1ae525c58f8/source {"sessionId": "653c88b0-623a-11e6-b94a-e1ae525c58f8"}
+2016-08-15 00:16:16 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:16:16 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/category.php?id=30> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:16:16 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/category.php?id=27>
+{'link': 'http://www.my_test_scrapy.com/category.php?id=27'}
+2016-08-15 00:16:16 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/category.php?id=24>
+{'link': 'http://www.my_test_scrapy.com/category.php?id=24'}
+2016-08-15 00:16:16 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/category.php?id=25>
+{'link': 'http://www.my_test_scrapy.com/category.php?id=25'}
+2016-08-15 00:16:16 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/category.php?id=9>
+{'link': 'http://www.my_test_scrapy.com/category.php?id=9'}
+2016-08-15 00:16:16 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/category.php?id=8>
+{'link': 'http://www.my_test_scrapy.com/category.php?id=8'}
+2016-08-15 00:16:16 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/category.php?id=4>
+{'link': 'http://www.my_test_scrapy.com/category.php?id=4'}
+2016-08-15 00:16:16 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/category.php?id=6>
+{'link': 'http://www.my_test_scrapy.com/category.php?id=6'}
+2016-08-15 00:16:16 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/category.php?id=1>
+{'link': 'http://www.my_test_scrapy.com/category.php?id=1'}
+2016-08-15 00:16:16 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/article.php?id=14>
+{'link': 'http://www.my_test_scrapy.com/article.php?id=14'}
+2016-08-15 00:16:16 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/affiche.php?ad_id=1&amp;uri=>
+{'link': 'http://www.my_test_scrapy.com/affiche.php?ad_id=1&amp;uri='}
+2016-08-15 00:16:16 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/category.php?id=3>
+{'link': 'http://www.my_test_scrapy.com/category.php?id=3'}
+2016-08-15 00:16:16 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/goods.php?id=69>
+{'link': 'http://www.my_test_scrapy.com/goods.php?id=69'}
+2016-08-15 00:16:16 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/goods.php?id=68>
+{'link': 'http://www.my_test_scrapy.com/goods.php?id=68'}
+2016-08-15 00:16:16 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/goods.php?id=64>
+{'link': 'http://www.my_test_scrapy.com/goods.php?id=64'}
+2016-08-15 00:16:16 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/goods.php?id=61>
+{'link': 'http://www.my_test_scrapy.com/goods.php?id=61'}
+2016-08-15 00:16:16 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/goods.php?id=63>
+{'link': 'http://www.my_test_scrapy.com/goods.php?id=63'}
+2016-08-15 00:16:16 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/goods.php?id=62>
+{'link': 'http://www.my_test_scrapy.com/goods.php?id=62'}
+2016-08-15 00:16:16 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/article.php?id=17>
+{'link': 'http://www.my_test_scrapy.com/article.php?id=17'}
+2016-08-15 00:16:16 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/affiche.php?ad_id=2&amp;uri=>
+{'link': 'http://www.my_test_scrapy.com/affiche.php?ad_id=2&amp;uri='}
+2016-08-15 00:16:16 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/user.php>
+{'link': 'http://www.my_test_scrapy.com/user.php'}
+2016-08-15 00:16:16 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/article.php?id=15>
+{'link': 'http://www.my_test_scrapy.com/article.php?id=15'}
+2016-08-15 00:16:16 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/article.php?id=12>
+{'link': 'http://www.my_test_scrapy.com/article.php?id=12'}
+2016-08-15 00:16:16 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/article.php?id=13>
+{'link': 'http://www.my_test_scrapy.com/article.php?id=13'}
+2016-08-15 00:16:16 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/article.php?id=10>
+{'link': 'http://www.my_test_scrapy.com/article.php?id=10'}
+2016-08-15 00:16:16 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/article.php?id=11>
+{'link': 'http://www.my_test_scrapy.com/article.php?id=11'}
+2016-08-15 00:16:16 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/themes/default/js>
+{'link': 'http://www.my_test_scrapy.com/themes/default/js'}
+2016-08-15 00:16:16 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/article.php?id=18>
+{'link': 'http://www.my_test_scrapy.com/article.php?id=18'}
+2016-08-15 00:16:16 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/article.php?id=19>
+{'link': 'http://www.my_test_scrapy.com/article.php?id=19'}
+2016-08-15 00:16:16 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/category.php?id=19>
+{'link': 'http://www.my_test_scrapy.com/category.php?id=19'}
+2016-08-15 00:16:16 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/category.php?id=32>
+{'link': 'http://www.my_test_scrapy.com/category.php?id=32'}
+2016-08-15 00:16:16 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/category.php?id=16>
+{'link': 'http://www.my_test_scrapy.com/category.php?id=16'}
+2016-08-15 00:16:16 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/category.php?id=12>
+{'link': 'http://www.my_test_scrapy.com/category.php?id=12'}
+2016-08-15 00:16:16 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/flow.php>
+{'link': 'http://www.my_test_scrapy.com/flow.php'}
+2016-08-15 00:16:16 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/themes/default/images>
+{'link': 'http://www.my_test_scrapy.com/themes/default/images'}
+2016-08-15 00:16:16 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/themes/default>
+{'link': 'http://www.my_test_scrapy.com/themes/default'}
+2016-08-15 00:16:16 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/feed.php>
+{'link': 'http://www.my_test_scrapy.com/feed.php'}
+2016-08-15 00:16:16 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/article.php?id=16>
+{'link': 'http://www.my_test_scrapy.com/article.php?id=16'}
+2016-08-15 00:16:16 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/goods.php?id=70>
+{'link': 'http://www.my_test_scrapy.com/goods.php?id=70'}
+2016-08-15 00:16:16 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/goods.php?id=72>
+{'link': 'http://www.my_test_scrapy.com/goods.php?id=72'}
+2016-08-15 00:16:16 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/user.php?act=register>
+{'link': 'http://www.my_test_scrapy.com/user.php?act=register'}
+2016-08-15 00:16:16 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/index.php>
+{'link': 'http://www.my_test_scrapy.com/index.php'}
+2016-08-15 00:16:16 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/category.php?id=18>
+{'link': 'http://www.my_test_scrapy.com/category.php?id=18'}
+2016-08-15 00:16:16 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/article.php?id=20>
+{'link': 'http://www.my_test_scrapy.com/article.php?id=20'}
+2016-08-15 00:16:16 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/images/201605/thumb_img>
+{'link': 'http://www.my_test_scrapy.com/images/201605/thumb_img'}
+2016-08-15 00:16:16 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/js>
+{'link': 'http://www.my_test_scrapy.com/js'}
+2016-08-15 00:16:16 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/article.php?id=9>
+{'link': 'http://www.my_test_scrapy.com/article.php?id=9'}
+2016-08-15 00:16:16 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/data/afficheimg>
+{'link': 'http://www.my_test_scrapy.com/data/afficheimg'}
+2016-08-15 00:16:17 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/category.php?id=28>
+{'link': 'http://www.my_test_scrapy.com/category.php?id=28'}
+2016-08-15 00:16:17 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/category.php?id=29>
+{'link': 'http://www.my_test_scrapy.com/category.php?id=29'}
+2016-08-15 00:16:17 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/category.php?id=22>
+{'link': 'http://www.my_test_scrapy.com/category.php?id=22'}
+2016-08-15 00:16:17 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/search.php>
+{'link': 'http://www.my_test_scrapy.com/search.php'}
+2016-08-15 00:16:17 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/category.php?id=20>
+{'link': 'http://www.my_test_scrapy.com/category.php?id=20'}
+2016-08-15 00:16:17 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/category.php?id=26>
+{'link': 'http://www.my_test_scrapy.com/category.php?id=26'}
+2016-08-15 00:16:17 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/category.php?id=31>
+{'link': 'http://www.my_test_scrapy.com/category.php?id=31'}
+2016-08-15 00:16:17 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/category.php?id=30>
+{'link': 'http://www.my_test_scrapy.com/category.php?id=30'}
+2016-08-15 00:16:17 [scrapy] INFO: Closing spider (finished)
+2016-08-15 00:16:17 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 15818,
+ 'downloader/request_count': 56,
+ 'downloader/request_method_count/GET': 56,
+ 'downloader/response_bytes': 37917,
+ 'downloader/response_count': 56,
+ 'downloader/response_status_count/200': 56,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2016, 8, 14, 16, 16, 17, 16000),
+ 'item_scraped_count': 56,
+ 'log_count/DEBUG': 339,
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 7,
+ 'log_count/WARNING': 1,
+ 'request_depth_max': 1,
+ 'response_received_count': 56,
+ 'scheduler/dequeued': 56,
+ 'scheduler/dequeued/memory': 56,
+ 'scheduler/enqueued': 56,
+ 'scheduler/enqueued/memory': 56,
+ 'start_time': datetime.datetime(2016, 8, 14, 16, 16, 2, 958000)}
+2016-08-15 00:16:17 [scrapy] INFO: Spider closed (finished)
+2016-08-15 00:18:28 [scrapy] INFO: Scrapy 1.1.1 started (bot: localhost)
+2016-08-15 00:18:28 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'localhost.spiders', 'DEPTH_LIMIT': 3, 'CONCURRENT_REQUESTS': 100, 'SPIDER_MODULES': ['localhost.spiders'], 'BOT_NAME': 'localhost', 'LOG_FILE': 'scrapy.log'}
+2016-08-15 00:18:28 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats']
+2016-08-15 00:18:28 [py.warnings] WARNING: C:\Users\Faith.Faith-PC\Desktop\scrapy-project\localhost\localhost\middleware.py:8: ScrapyDeprecationWarning: Module `scrapy.contrib.downloadermiddleware.useragent` is deprecated, use `scrapy.downloadermiddlewares.useragent` instead
+  from scrapy.contrib.downloadermiddleware.useragent import UserAgentMiddleware
+
+2016-08-15 00:18:30 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14947/wd/hub/session {"requiredCapabilities": {}, "desiredCapabilities": {"phantomjs.page.settings.disk-cache": true, "javascriptEnabled": true, "phantomjs.page.settings.resourceTimeout": 1000, "phantomjs.page.settings.loadImages": false, "platform": "ANY", "browserName": "phantomjs", "version": ""}}
+2016-08-15 00:18:30 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:31 [scrapy] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'localhost.middleware.RotateUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats',
+ 'localhost.middleware.PageRresolution']
+2016-08-15 00:18:31 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2016-08-15 00:18:31 [scrapy] INFO: Enabled item pipelines:
+['localhost.pipelines.LocalhostPipeline']
+2016-08-15 00:18:31 [scrapy] INFO: Spider opened
+2016-08-15 00:18:31 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2016-08-15 00:18:31 [scrapy] ERROR: Error caught on signal handler: <bound method ?.spider_opened of <localhost.middleware.RotateUserAgentMiddleware object at 0x00000000046F1208>>
+Traceback (most recent call last):
+  File "c:\python27\lib\site-packages\twisted\internet\defer.py", line 150, in maybeDeferred
+    result = f(*args, **kw)
+  File "build\bdist.win-amd64\egg\pydispatch\robustapply.py", line 55, in robustApply
+  File "c:\python27\lib\site-packages\scrapy-1.1.1-py2.7.egg\scrapy\downloadermiddlewares\useragent.py", line 19, in spider_opened
+    self.user_agent = getattr(spider, 'user_agent', self.user_agent)
+AttributeError: 'RotateUserAgentMiddleware' object has no attribute 'user_agent'
+2016-08-15 00:18:31 [scrapy] DEBUG: Telnet console listening on 127.0.0.1:6023
+2016-08-15 00:18:31 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/url {"url": "http://www.my_test_scrapy.com/ecshop", "sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:43 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:43 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/source {"sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:43 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:43 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/ecshop> (referer: None)
+2016-08-15 00:18:44 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/ecshop>
+{'link': 'http://www.my_test_scrapy.com/ecshop'}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/url {"url": "http://www.my_test_scrapy.com/category.php?id=25", "sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/source {"sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/category.php?id=25> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/url {"url": "http://www.my_test_scrapy.com/category.php?id=9", "sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/source {"sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/category.php?id=9> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/url {"url": "http://www.my_test_scrapy.com/category.php?id=8", "sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/source {"sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/category.php?id=8> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/url {"url": "http://www.my_test_scrapy.com/category.php?id=4", "sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/source {"sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/category.php?id=4> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/url {"url": "http://www.my_test_scrapy.com/category.php?id=6", "sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/source {"sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/category.php?id=6> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/url {"url": "http://www.my_test_scrapy.com/category.php?id=1", "sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/source {"sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/category.php?id=1> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/url {"url": "http://www.my_test_scrapy.com/article.php?id=14", "sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/source {"sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/article.php?id=14> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/url {"url": "http://www.my_test_scrapy.com/category.php?id=3", "sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/source {"sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/category.php?id=3> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/url {"url": "http://www.my_test_scrapy.com/affiche.php?ad_id=1&amp;uri=", "sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/source {"sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/affiche.php?ad_id=1&amp;uri=> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/url {"url": "http://www.my_test_scrapy.com/goods.php?id=69", "sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/source {"sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/goods.php?id=69> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/url {"url": "http://www.my_test_scrapy.com/goods.php?id=68", "sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/source {"sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/goods.php?id=68> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/url {"url": "http://www.my_test_scrapy.com/goods.php?id=64", "sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/source {"sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/goods.php?id=64> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/url {"url": "http://www.my_test_scrapy.com/goods.php?id=61", "sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/source {"sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/goods.php?id=61> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/url {"url": "http://www.my_test_scrapy.com/goods.php?id=63", "sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/source {"sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/goods.php?id=63> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/url {"url": "http://www.my_test_scrapy.com/goods.php?id=62", "sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/source {"sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/goods.php?id=62> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/url {"url": "http://www.my_test_scrapy.com/affiche.php?ad_id=2&amp;uri=", "sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/source {"sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/affiche.php?ad_id=2&amp;uri=> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/url {"url": "http://www.my_test_scrapy.com/article.php?id=17", "sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/source {"sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/article.php?id=17> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/url {"url": "http://www.my_test_scrapy.com/user.php", "sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/source {"sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/user.php> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/url {"url": "http://www.my_test_scrapy.com/article.php?id=15", "sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/source {"sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/article.php?id=15> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/url {"url": "http://www.my_test_scrapy.com/article.php?id=12", "sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/source {"sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/article.php?id=12> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/url {"url": "http://www.my_test_scrapy.com/article.php?id=13", "sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/source {"sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/article.php?id=13> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/url {"url": "http://www.my_test_scrapy.com/article.php?id=10", "sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/source {"sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/article.php?id=10> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/url {"url": "http://www.my_test_scrapy.com/article.php?id=11", "sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/source {"sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/article.php?id=11> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/url {"url": "http://www.my_test_scrapy.com/themes/default/js", "sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/source {"sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/themes/default/js> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/url {"url": "http://www.my_test_scrapy.com/article.php?id=18", "sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/source {"sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/article.php?id=18> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/url {"url": "http://www.my_test_scrapy.com/article.php?id=19", "sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/source {"sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/article.php?id=19> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/url {"url": "http://www.my_test_scrapy.com/category.php?id=12", "sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/source {"sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/category.php?id=12> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/url {"url": "http://www.my_test_scrapy.com/flow.php", "sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/source {"sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/flow.php> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/url {"url": "http://www.my_test_scrapy.com/themes/default/images", "sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/source {"sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/themes/default/images> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/url {"url": "http://www.my_test_scrapy.com/themes/default", "sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/source {"sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/themes/default> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/url {"url": "http://www.my_test_scrapy.com/feed.php", "sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/source {"sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/feed.php> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/url {"url": "http://www.my_test_scrapy.com/article.php?id=16", "sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/source {"sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/article.php?id=16> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/url {"url": "http://www.my_test_scrapy.com/goods.php?id=72", "sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/source {"sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/goods.php?id=72> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/url {"url": "http://www.my_test_scrapy.com/goods.php?id=70", "sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/source {"sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/goods.php?id=70> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/url {"url": "http://www.my_test_scrapy.com/user.php?act=register", "sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/source {"sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/user.php?act=register> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/url {"url": "http://www.my_test_scrapy.com/category.php?id=18", "sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/source {"sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/category.php?id=18> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/url {"url": "http://www.my_test_scrapy.com/index.php", "sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/source {"sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/index.php> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/url {"url": "http://www.my_test_scrapy.com/article.php?id=20", "sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/source {"sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/article.php?id=20> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/url {"url": "http://www.my_test_scrapy.com/images/201605/thumb_img", "sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/source {"sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/images/201605/thumb_img> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/url {"url": "http://www.my_test_scrapy.com/js", "sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/source {"sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/js> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/url {"url": "http://www.my_test_scrapy.com/article.php?id=9", "sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/source {"sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/article.php?id=9> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/url {"url": "http://www.my_test_scrapy.com/data/afficheimg", "sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/source {"sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/data/afficheimg> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/url {"url": "http://www.my_test_scrapy.com/category.php?id=28", "sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/source {"sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/category.php?id=28> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/url {"url": "http://www.my_test_scrapy.com/category.php?id=29", "sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/source {"sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/category.php?id=29> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/url {"url": "http://www.my_test_scrapy.com/category.php?id=22", "sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/source {"sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/category.php?id=22> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/url {"url": "http://www.my_test_scrapy.com/search.php", "sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/source {"sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/search.php> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/url {"url": "http://www.my_test_scrapy.com/category.php?id=20", "sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/source {"sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/category.php?id=20> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/url {"url": "http://www.my_test_scrapy.com/category.php?id=26", "sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/source {"sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/category.php?id=26> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/url {"url": "http://www.my_test_scrapy.com/category.php?id=27", "sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/source {"sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/category.php?id=27> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/url {"url": "http://www.my_test_scrapy.com/category.php?id=24", "sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/source {"sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/category.php?id=24> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/url {"url": "http://www.my_test_scrapy.com/category.php?id=31", "sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/source {"sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/category.php?id=31> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/url {"url": "http://www.my_test_scrapy.com/category.php?id=30", "sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/source {"sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/category.php?id=30> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/url {"url": "http://www.my_test_scrapy.com/category.php?id=19", "sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/source {"sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/category.php?id=19> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/url {"url": "http://www.my_test_scrapy.com/category.php?id=32", "sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/source {"sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/category.php?id=32> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/url {"url": "http://www.my_test_scrapy.com/category.php?id=16", "sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:14947/wd/hub/session/bd842c80-623a-11e6-9183-0da0d5289529/source {"sessionId": "bd842c80-623a-11e6-9183-0da0d5289529"}
+2016-08-15 00:18:44 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:18:44 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/category.php?id=16> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 00:18:45 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/category.php?id=25>
+{'link': 'http://www.my_test_scrapy.com/category.php?id=25'}
+2016-08-15 00:18:45 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/category.php?id=8>
+{'link': 'http://www.my_test_scrapy.com/category.php?id=8'}
+2016-08-15 00:18:45 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/category.php?id=9>
+{'link': 'http://www.my_test_scrapy.com/category.php?id=9'}
+2016-08-15 00:18:45 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/category.php?id=4>
+{'link': 'http://www.my_test_scrapy.com/category.php?id=4'}
+2016-08-15 00:18:45 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/category.php?id=6>
+{'link': 'http://www.my_test_scrapy.com/category.php?id=6'}
+2016-08-15 00:18:45 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/article.php?id=14>
+{'link': 'http://www.my_test_scrapy.com/article.php?id=14'}
+2016-08-15 00:18:45 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/category.php?id=1>
+{'link': 'http://www.my_test_scrapy.com/category.php?id=1'}
+2016-08-15 00:18:45 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/category.php?id=3>
+{'link': 'http://www.my_test_scrapy.com/category.php?id=3'}
+2016-08-15 00:18:45 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/affiche.php?ad_id=1&amp;uri=>
+{'link': 'http://www.my_test_scrapy.com/affiche.php?ad_id=1&amp;uri='}
+2016-08-15 00:18:45 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/goods.php?id=69>
+{'link': 'http://www.my_test_scrapy.com/goods.php?id=69'}
+2016-08-15 00:18:45 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/goods.php?id=64>
+{'link': 'http://www.my_test_scrapy.com/goods.php?id=64'}
+2016-08-15 00:18:45 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/goods.php?id=68>
+{'link': 'http://www.my_test_scrapy.com/goods.php?id=68'}
+2016-08-15 00:18:45 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/goods.php?id=61>
+{'link': 'http://www.my_test_scrapy.com/goods.php?id=61'}
+2016-08-15 00:18:45 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/goods.php?id=63>
+{'link': 'http://www.my_test_scrapy.com/goods.php?id=63'}
+2016-08-15 00:18:45 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/affiche.php?ad_id=2&amp;uri=>
+{'link': 'http://www.my_test_scrapy.com/affiche.php?ad_id=2&amp;uri='}
+2016-08-15 00:18:45 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/goods.php?id=62>
+{'link': 'http://www.my_test_scrapy.com/goods.php?id=62'}
+2016-08-15 00:18:45 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/user.php>
+{'link': 'http://www.my_test_scrapy.com/user.php'}
+2016-08-15 00:18:45 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/article.php?id=17>
+{'link': 'http://www.my_test_scrapy.com/article.php?id=17'}
+2016-08-15 00:18:45 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/article.php?id=15>
+{'link': 'http://www.my_test_scrapy.com/article.php?id=15'}
+2016-08-15 00:18:45 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/article.php?id=12>
+{'link': 'http://www.my_test_scrapy.com/article.php?id=12'}
+2016-08-15 00:18:45 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/article.php?id=13>
+{'link': 'http://www.my_test_scrapy.com/article.php?id=13'}
+2016-08-15 00:18:45 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/article.php?id=11>
+{'link': 'http://www.my_test_scrapy.com/article.php?id=11'}
+2016-08-15 00:18:45 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/article.php?id=10>
+{'link': 'http://www.my_test_scrapy.com/article.php?id=10'}
+2016-08-15 00:18:45 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/themes/default/js>
+{'link': 'http://www.my_test_scrapy.com/themes/default/js'}
+2016-08-15 00:18:45 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/article.php?id=19>
+{'link': 'http://www.my_test_scrapy.com/article.php?id=19'}
+2016-08-15 00:18:45 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/article.php?id=18>
+{'link': 'http://www.my_test_scrapy.com/article.php?id=18'}
+2016-08-15 00:18:45 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/category.php?id=12>
+{'link': 'http://www.my_test_scrapy.com/category.php?id=12'}
+2016-08-15 00:18:45 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/flow.php>
+{'link': 'http://www.my_test_scrapy.com/flow.php'}
+2016-08-15 00:18:45 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/themes/default>
+{'link': 'http://www.my_test_scrapy.com/themes/default'}
+2016-08-15 00:18:45 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/themes/default/images>
+{'link': 'http://www.my_test_scrapy.com/themes/default/images'}
+2016-08-15 00:18:45 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/feed.php>
+{'link': 'http://www.my_test_scrapy.com/feed.php'}
+2016-08-15 00:18:45 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/article.php?id=16>
+{'link': 'http://www.my_test_scrapy.com/article.php?id=16'}
+2016-08-15 00:18:45 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/goods.php?id=72>
+{'link': 'http://www.my_test_scrapy.com/goods.php?id=72'}
+2016-08-15 00:18:45 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/goods.php?id=70>
+{'link': 'http://www.my_test_scrapy.com/goods.php?id=70'}
+2016-08-15 00:18:45 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/user.php?act=register>
+{'link': 'http://www.my_test_scrapy.com/user.php?act=register'}
+2016-08-15 00:18:45 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/category.php?id=18>
+{'link': 'http://www.my_test_scrapy.com/category.php?id=18'}
+2016-08-15 00:18:45 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/index.php>
+{'link': 'http://www.my_test_scrapy.com/index.php'}
+2016-08-15 00:18:45 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/article.php?id=20>
+{'link': 'http://www.my_test_scrapy.com/article.php?id=20'}
+2016-08-15 00:18:45 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/images/201605/thumb_img>
+{'link': 'http://www.my_test_scrapy.com/images/201605/thumb_img'}
+2016-08-15 00:18:45 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/js>
+{'link': 'http://www.my_test_scrapy.com/js'}
+2016-08-15 00:18:45 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/article.php?id=9>
+{'link': 'http://www.my_test_scrapy.com/article.php?id=9'}
+2016-08-15 00:18:45 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/data/afficheimg>
+{'link': 'http://www.my_test_scrapy.com/data/afficheimg'}
+2016-08-15 00:18:45 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/category.php?id=28>
+{'link': 'http://www.my_test_scrapy.com/category.php?id=28'}
+2016-08-15 00:18:45 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/category.php?id=29>
+{'link': 'http://www.my_test_scrapy.com/category.php?id=29'}
+2016-08-15 00:18:45 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/category.php?id=22>
+{'link': 'http://www.my_test_scrapy.com/category.php?id=22'}
+2016-08-15 00:18:45 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/search.php>
+{'link': 'http://www.my_test_scrapy.com/search.php'}
+2016-08-15 00:18:45 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/category.php?id=20>
+{'link': 'http://www.my_test_scrapy.com/category.php?id=20'}
+2016-08-15 00:18:45 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/category.php?id=26>
+{'link': 'http://www.my_test_scrapy.com/category.php?id=26'}
+2016-08-15 00:18:45 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/category.php?id=27>
+{'link': 'http://www.my_test_scrapy.com/category.php?id=27'}
+2016-08-15 00:18:45 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/category.php?id=24>
+{'link': 'http://www.my_test_scrapy.com/category.php?id=24'}
+2016-08-15 00:18:45 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/category.php?id=31>
+{'link': 'http://www.my_test_scrapy.com/category.php?id=31'}
+2016-08-15 00:18:45 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/category.php?id=30>
+{'link': 'http://www.my_test_scrapy.com/category.php?id=30'}
+2016-08-15 00:18:45 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/category.php?id=19>
+{'link': 'http://www.my_test_scrapy.com/category.php?id=19'}
+2016-08-15 00:18:45 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/category.php?id=32>
+{'link': 'http://www.my_test_scrapy.com/category.php?id=32'}
+2016-08-15 00:18:45 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/category.php?id=16>
+{'link': 'http://www.my_test_scrapy.com/category.php?id=16'}
+2016-08-15 00:18:45 [scrapy] INFO: Closing spider (finished)
+2016-08-15 00:18:45 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 15818,
+ 'downloader/request_count': 56,
+ 'downloader/request_method_count/GET': 56,
+ 'downloader/response_bytes': 37917,
+ 'downloader/response_count': 56,
+ 'downloader/response_status_count/200': 56,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2016, 8, 14, 16, 18, 45, 158000),
+ 'item_scraped_count': 56,
+ 'log_count/DEBUG': 339,
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 7,
+ 'log_count/WARNING': 1,
+ 'request_depth_max': 1,
+ 'response_received_count': 56,
+ 'scheduler/dequeued': 56,
+ 'scheduler/dequeued/memory': 56,
+ 'scheduler/enqueued': 56,
+ 'scheduler/enqueued/memory': 56,
+ 'start_time': datetime.datetime(2016, 8, 14, 16, 18, 31, 85000)}
+2016-08-15 00:18:45 [scrapy] INFO: Spider closed (finished)
+2016-08-15 00:26:07 [scrapy] INFO: Scrapy 1.1.1 started (bot: localhost)
+2016-08-15 00:26:07 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'localhost.spiders', 'DEPTH_LIMIT': 3, 'CONCURRENT_REQUESTS': 100, 'SPIDER_MODULES': ['localhost.spiders'], 'BOT_NAME': 'localhost', 'LOG_FILE': 'scrapy.log'}
+2016-08-15 00:26:07 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats']
+2016-08-15 00:26:07 [py.warnings] WARNING: C:\Users\Faith.Faith-PC\Desktop\scrapy-project\localhost\localhost\middleware.py:7: ScrapyDeprecationWarning: Module `scrapy.contrib.downloadermiddleware.useragent` is deprecated, use `scrapy.downloadermiddlewares.useragent` instead
+  from scrapy.contrib.downloadermiddleware.useragent import UserAgentMiddleware
+
+2016-08-15 00:26:10 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:2767/wd/hub/session {"requiredCapabilities": {}, "desiredCapabilities": {"phantomjs.page.settings.disk-cache": true, "javascriptEnabled": true, "phantomjs.page.settings.resourceTimeout": 1000, "phantomjs.page.settings.loadImages": false, "platform": "ANY", "browserName": "phantomjs", "version": ""}}
+2016-08-15 00:26:10 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 00:26:10 [scrapy] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'localhost.middleware.RotateUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats',
+ 'localhost.middleware.PageRresolution']
+2016-08-15 00:26:10 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2016-08-15 00:26:10 [scrapy] INFO: Enabled item pipelines:
+['localhost.pipelines.LocalhostPipeline']
+2016-08-15 00:26:10 [scrapy] INFO: Spider opened
+2016-08-15 00:26:10 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2016-08-15 00:26:10 [scrapy] ERROR: Error caught on signal handler: <bound method ?.spider_opened of <localhost.middleware.RotateUserAgentMiddleware object at 0x00000000048DC198>>
+Traceback (most recent call last):
+  File "c:\python27\lib\site-packages\twisted\internet\defer.py", line 150, in maybeDeferred
+    result = f(*args, **kw)
+  File "build\bdist.win-amd64\egg\pydispatch\robustapply.py", line 55, in robustApply
+  File "c:\python27\lib\site-packages\scrapy-1.1.1-py2.7.egg\scrapy\downloadermiddlewares\useragent.py", line 19, in spider_opened
+    self.user_agent = getattr(spider, 'user_agent', self.user_agent)
+AttributeError: 'RotateUserAgentMiddleware' object has no attribute 'user_agent'
+2016-08-15 00:26:10 [scrapy] DEBUG: Telnet console listening on 127.0.0.1:6023
+2016-08-15 00:26:10 [scrapy] ERROR: Error downloading <GET http://www.my_test_scrapy.com/ecshop>
+Traceback (most recent call last):
+  File "c:\python27\lib\site-packages\twisted\internet\defer.py", line 1128, in _inlineCallbacks
+    result = g.send(result)
+  File "c:\python27\lib\site-packages\scrapy-1.1.1-py2.7.egg\scrapy\core\downloader\middleware.py", line 37, in process_request
+    response = yield method(request=request, spider=spider)
+  File "C:\Users\Faith.Faith-PC\Desktop\scrapy-project\localhost\localhost\middleware.py", line 38, in process_request
+    ua = random.choice(self.user_agent_list)
+AttributeError: 'RotateUserAgentMiddleware' object has no attribute 'user_agent_list'
+2016-08-15 00:26:10 [scrapy] INFO: Closing spider (finished)
+2016-08-15 00:26:10 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/exception_count': 1,
+ 'downloader/exception_type_count/exceptions.AttributeError': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2016, 8, 14, 16, 26, 10, 772000),
+ 'log_count/DEBUG': 3,
+ 'log_count/ERROR': 2,
+ 'log_count/INFO': 7,
+ 'log_count/WARNING': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2016, 8, 14, 16, 26, 10, 564000)}
+2016-08-15 00:26:10 [scrapy] INFO: Spider closed (finished)
+2016-08-15 01:02:33 [scrapy] INFO: Scrapy 1.1.1 started (bot: localhost)
+2016-08-15 01:02:33 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'localhost.spiders', 'DEPTH_LIMIT': 3, 'CONCURRENT_REQUESTS': 100, 'SPIDER_MODULES': ['localhost.spiders'], 'BOT_NAME': 'localhost', 'LOG_FILE': 'scrapy.log'}
+2016-08-15 01:02:33 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats']
+2016-08-15 01:02:33 [py.warnings] WARNING: C:\Users\Faith.Faith-PC\Desktop\scrapy-project\localhost\localhost\middleware.py:7: ScrapyDeprecationWarning: Module `scrapy.contrib.downloadermiddleware.useragent` is deprecated, use `scrapy.downloadermiddlewares.useragent` instead
+  from scrapy.contrib.downloadermiddleware.useragent import UserAgentMiddleware
+
+2016-08-15 01:02:36 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:1860/wd/hub/session {"requiredCapabilities": {}, "desiredCapabilities": {"phantomjs.page.settings.disk-cache": true, "javascriptEnabled": true, "phantomjs.page.settings.resourceTimeout": 1000, "phantomjs.page.customHeaders.Cookie": "", "phantomjs.page.settings.loadImages": false, "platform": "ANY", "browserName": "phantomjs", "version": ""}}
+2016-08-15 01:02:36 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:02:36 [scrapy] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'localhost.middleware.RotateUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats',
+ 'localhost.middleware.PageRresolution']
+2016-08-15 01:02:36 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2016-08-15 01:02:36 [scrapy] INFO: Enabled item pipelines:
+['localhost.pipelines.LocalhostPipeline']
+2016-08-15 01:02:36 [scrapy] INFO: Spider opened
+2016-08-15 01:02:36 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2016-08-15 01:02:36 [scrapy] DEBUG: Telnet console listening on 127.0.0.1:6023
+2016-08-15 01:02:36 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:1860/wd/hub/session/e63dd620-6240-11e6-9f82-e792b2c53941/url {"url": "http://www.my_test_scrapy.com/ecshop", "sessionId": "e63dd620-6240-11e6-9f82-e792b2c53941"}
+2016-08-15 01:02:37 [scrapy] INFO: Received SIGBREAK, shutting down gracefully. Send again to force 
+2016-08-15 01:02:37 [scrapy] DEBUG: Retrying <GET http://www.my_test_scrapy.com/ecshop> (failed 1 times): [Errno 10054] 
+2016-08-15 01:02:37 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:1860/wd/hub/session/e63dd620-6240-11e6-9f82-e792b2c53941/url {"url": "http://www.my_test_scrapy.com/ecshop", "sessionId": "e63dd620-6240-11e6-9f82-e792b2c53941"}
+2016-08-15 01:02:38 [scrapy] DEBUG: Retrying <GET http://www.my_test_scrapy.com/ecshop> (failed 2 times): <urlopen error [Errno 10061] >
+2016-08-15 01:02:38 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:1860/wd/hub/session/e63dd620-6240-11e6-9f82-e792b2c53941/url {"url": "http://www.my_test_scrapy.com/ecshop", "sessionId": "e63dd620-6240-11e6-9f82-e792b2c53941"}
+2016-08-15 01:02:39 [scrapy] DEBUG: Gave up retrying <GET http://www.my_test_scrapy.com/ecshop> (failed 3 times): <urlopen error [Errno 10061] >
+2016-08-15 01:02:39 [scrapy] INFO: Closing spider (shutdown)
+2016-08-15 01:02:39 [scrapy] ERROR: Error downloading <GET http://www.my_test_scrapy.com/ecshop>
+Traceback (most recent call last):
+  File "c:\python27\lib\site-packages\twisted\internet\defer.py", line 1128, in _inlineCallbacks
+    result = g.send(result)
+  File "c:\python27\lib\site-packages\scrapy-1.1.1-py2.7.egg\scrapy\core\downloader\middleware.py", line 37, in process_request
+    response = yield method(request=request, spider=spider)
+  File "C:\Users\Faith.Faith-PC\Desktop\scrapy-project\localhost\localhost\middleware.py", line 15, in process_request
+    content = weki.VisitPage(url)
+  File "C:\Users\Faith.Faith-PC\Desktop\scrapy-project\localhost\localhost\downloader.py", line 20, in VisitPage
+    self.browser.get(url)
+  File "c:\python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 248, in get
+    self.execute(Command.GET, {'url': url})
+  File "c:\python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 234, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "c:\python27\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 401, in execute
+    return self._request(command_info[0], url, body=data)
+  File "c:\python27\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 471, in _request
+    resp = opener.open(request, timeout=self._timeout)
+  File "c:\python27\lib\urllib2.py", line 431, in open
+    response = self._open(req, data)
+  File "c:\python27\lib\urllib2.py", line 449, in _open
+    '_open', req)
+  File "c:\python27\lib\urllib2.py", line 409, in _call_chain
+    result = func(*args)
+  File "c:\python27\lib\urllib2.py", line 1227, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "c:\python27\lib\urllib2.py", line 1197, in do_open
+    raise URLError(err)
+URLError: <urlopen error [Errno 10061] >
+2016-08-15 01:02:39 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/exception_count': 3,
+ 'downloader/exception_type_count/socket.error': 1,
+ 'downloader/exception_type_count/urllib2.URLError': 2,
+ 'downloader/request_bytes': 678,
+ 'downloader/request_count': 3,
+ 'downloader/request_method_count/GET': 3,
+ 'finish_reason': 'shutdown',
+ 'finish_time': datetime.datetime(2016, 8, 14, 17, 2, 39, 560000),
+ 'log_count/DEBUG': 9,
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 8,
+ 'log_count/WARNING': 1,
+ 'scheduler/dequeued': 3,
+ 'scheduler/dequeued/memory': 3,
+ 'scheduler/enqueued': 3,
+ 'scheduler/enqueued/memory': 3,
+ 'start_time': datetime.datetime(2016, 8, 14, 17, 2, 36, 375000)}
+2016-08-15 01:02:39 [scrapy] INFO: Spider closed (shutdown)
+2016-08-15 01:02:53 [scrapy] INFO: Scrapy 1.1.1 started (bot: localhost)
+2016-08-15 01:02:53 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'localhost.spiders', 'DEPTH_LIMIT': 3, 'CONCURRENT_REQUESTS': 100, 'SPIDER_MODULES': ['localhost.spiders'], 'BOT_NAME': 'localhost', 'LOG_FILE': 'scrapy.log'}
+2016-08-15 01:02:53 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats']
+2016-08-15 01:02:53 [py.warnings] WARNING: C:\Users\Faith.Faith-PC\Desktop\scrapy-project\localhost\localhost\middleware.py:7: ScrapyDeprecationWarning: Module `scrapy.contrib.downloadermiddleware.useragent` is deprecated, use `scrapy.downloadermiddlewares.useragent` instead
+  from scrapy.contrib.downloadermiddleware.useragent import UserAgentMiddleware
+
+2016-08-15 01:02:56 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:1890/wd/hub/session {"requiredCapabilities": {}, "desiredCapabilities": {"phantomjs.page.settings.disk-cache": true, "javascriptEnabled": true, "phantomjs.page.settings.resourceTimeout": 1000, "phantomjs.page.customHeaders.Cookie": "", "phantomjs.page.settings.loadImages": false, "platform": "ANY", "browserName": "phantomjs", "version": ""}}
+2016-08-15 01:02:56 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:02:56 [scrapy] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'localhost.middleware.RotateUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats',
+ 'localhost.middleware.PageRresolution']
+2016-08-15 01:02:56 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2016-08-15 01:02:56 [scrapy] INFO: Enabled item pipelines:
+['localhost.pipelines.LocalhostPipeline']
+2016-08-15 01:02:56 [scrapy] INFO: Spider opened
+2016-08-15 01:02:56 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2016-08-15 01:02:56 [scrapy] DEBUG: Telnet console listening on 127.0.0.1:6023
+2016-08-15 01:02:56 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/url {"url": "http://www.my_test_scrapy.com/ecshop", "sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/source {"sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/ecshop> (referer: None)
+2016-08-15 01:03:00 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/ecshop>
+{'link': 'http://www.my_test_scrapy.com/ecshop'}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/url {"url": "http://www.my_test_scrapy.com/category.php?id=9", "sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/source {"sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/category.php?id=9> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/url {"url": "http://www.my_test_scrapy.com/category.php?id=8", "sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/source {"sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/category.php?id=8> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/url {"url": "http://www.my_test_scrapy.com/category.php?id=4", "sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/source {"sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/category.php?id=4> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/url {"url": "http://www.my_test_scrapy.com/category.php?id=6", "sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/source {"sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/category.php?id=6> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/url {"url": "http://www.my_test_scrapy.com/category.php?id=1", "sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/source {"sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/category.php?id=1> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/url {"url": "http://www.my_test_scrapy.com/article.php?id=14", "sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/source {"sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/article.php?id=14> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/url {"url": "http://www.my_test_scrapy.com/category.php?id=3", "sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/source {"sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/category.php?id=3> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/url {"url": "http://www.my_test_scrapy.com/affiche.php?ad_id=1&amp;uri=", "sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/source {"sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/affiche.php?ad_id=1&amp;uri=> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/url {"url": "http://www.my_test_scrapy.com/goods.php?id=69", "sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/source {"sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/goods.php?id=69> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/url {"url": "http://www.my_test_scrapy.com/goods.php?id=68", "sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/source {"sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/goods.php?id=68> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/url {"url": "http://www.my_test_scrapy.com/goods.php?id=64", "sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/source {"sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/goods.php?id=64> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/url {"url": "http://www.my_test_scrapy.com/goods.php?id=61", "sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/source {"sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/goods.php?id=61> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/url {"url": "http://www.my_test_scrapy.com/goods.php?id=63", "sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/source {"sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/goods.php?id=63> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/url {"url": "http://www.my_test_scrapy.com/goods.php?id=62", "sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/source {"sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/goods.php?id=62> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/url {"url": "http://www.my_test_scrapy.com/affiche.php?ad_id=2&amp;uri=", "sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/source {"sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/affiche.php?ad_id=2&amp;uri=> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/url {"url": "http://www.my_test_scrapy.com/article.php?id=17", "sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/source {"sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/article.php?id=17> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/url {"url": "http://www.my_test_scrapy.com/user.php", "sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/source {"sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/user.php> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/url {"url": "http://www.my_test_scrapy.com/article.php?id=15", "sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/source {"sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/article.php?id=15> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/url {"url": "http://www.my_test_scrapy.com/article.php?id=12", "sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/source {"sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/article.php?id=12> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/url {"url": "http://www.my_test_scrapy.com/article.php?id=13", "sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/source {"sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/article.php?id=13> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/url {"url": "http://www.my_test_scrapy.com/article.php?id=10", "sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/source {"sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/article.php?id=10> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/url {"url": "http://www.my_test_scrapy.com/article.php?id=11", "sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/source {"sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/article.php?id=11> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/url {"url": "http://www.my_test_scrapy.com/themes/default/js", "sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/source {"sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/themes/default/js> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/url {"url": "http://www.my_test_scrapy.com/article.php?id=18", "sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/source {"sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/article.php?id=18> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/url {"url": "http://www.my_test_scrapy.com/article.php?id=19", "sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/source {"sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/article.php?id=19> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/url {"url": "http://www.my_test_scrapy.com/category.php?id=19", "sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/source {"sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/category.php?id=19> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/url {"url": "http://www.my_test_scrapy.com/category.php?id=32", "sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/source {"sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/category.php?id=32> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/url {"url": "http://www.my_test_scrapy.com/category.php?id=16", "sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/source {"sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/category.php?id=16> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/url {"url": "http://www.my_test_scrapy.com/category.php?id=12", "sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/source {"sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/category.php?id=12> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/url {"url": "http://www.my_test_scrapy.com/flow.php", "sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/source {"sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/flow.php> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/url {"url": "http://www.my_test_scrapy.com/themes/default/images", "sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/source {"sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/themes/default/images> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/url {"url": "http://www.my_test_scrapy.com/themes/default", "sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/source {"sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/themes/default> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/url {"url": "http://www.my_test_scrapy.com/feed.php", "sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/source {"sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/feed.php> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/url {"url": "http://www.my_test_scrapy.com/article.php?id=16", "sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/source {"sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/article.php?id=16> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/url {"url": "http://www.my_test_scrapy.com/goods.php?id=72", "sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/source {"sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/goods.php?id=72> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/url {"url": "http://www.my_test_scrapy.com/goods.php?id=70", "sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/source {"sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/goods.php?id=70> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/url {"url": "http://www.my_test_scrapy.com/user.php?act=register", "sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/source {"sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/user.php?act=register> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/url {"url": "http://www.my_test_scrapy.com/category.php?id=18", "sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/source {"sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/category.php?id=18> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/url {"url": "http://www.my_test_scrapy.com/index.php", "sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/source {"sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:01 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/index.php> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 01:03:01 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/url {"url": "http://www.my_test_scrapy.com/article.php?id=20", "sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:01 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:01 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/source {"sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:01 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:01 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/article.php?id=20> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 01:03:01 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/url {"url": "http://www.my_test_scrapy.com/images/201605/thumb_img", "sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:01 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:01 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/source {"sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:01 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:01 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/images/201605/thumb_img> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 01:03:01 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/url {"url": "http://www.my_test_scrapy.com/js", "sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:01 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:01 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/source {"sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:01 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:01 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/js> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 01:03:01 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/url {"url": "http://www.my_test_scrapy.com/article.php?id=9", "sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:01 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:01 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/source {"sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:01 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:01 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/article.php?id=9> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 01:03:01 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/url {"url": "http://www.my_test_scrapy.com/data/afficheimg", "sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:01 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:01 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/source {"sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:01 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:01 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/data/afficheimg> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 01:03:01 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/url {"url": "http://www.my_test_scrapy.com/category.php?id=28", "sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:01 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:01 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/source {"sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:01 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:01 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/category.php?id=28> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 01:03:01 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/url {"url": "http://www.my_test_scrapy.com/category.php?id=29", "sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:01 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:01 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/source {"sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:01 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:01 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/category.php?id=29> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 01:03:01 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/url {"url": "http://www.my_test_scrapy.com/category.php?id=22", "sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:01 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:01 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/source {"sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:01 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:01 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/category.php?id=22> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 01:03:01 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/url {"url": "http://www.my_test_scrapy.com/search.php", "sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:01 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:01 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/source {"sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:01 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:01 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/search.php> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 01:03:01 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/url {"url": "http://www.my_test_scrapy.com/category.php?id=20", "sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:01 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:01 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/source {"sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:01 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:01 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/category.php?id=20> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 01:03:01 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/url {"url": "http://www.my_test_scrapy.com/category.php?id=26", "sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:01 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:01 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/source {"sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:01 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:01 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/category.php?id=26> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 01:03:01 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/url {"url": "http://www.my_test_scrapy.com/category.php?id=27", "sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:01 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:01 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/source {"sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:01 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:01 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/category.php?id=27> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 01:03:01 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/url {"url": "http://www.my_test_scrapy.com/category.php?id=24", "sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:01 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:01 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/source {"sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:01 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:01 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/category.php?id=24> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 01:03:01 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/url {"url": "http://www.my_test_scrapy.com/category.php?id=25", "sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:01 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:01 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/source {"sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:01 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:01 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/category.php?id=25> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 01:03:01 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/url {"url": "http://www.my_test_scrapy.com/category.php?id=31", "sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:01 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:01 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/source {"sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:01 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:01 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/category.php?id=31> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 01:03:01 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/url {"url": "http://www.my_test_scrapy.com/category.php?id=30", "sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:01 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:01 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:1890/wd/hub/session/f22a0d50-6240-11e6-8ffa-27bd113a6ed1/source {"sessionId": "f22a0d50-6240-11e6-8ffa-27bd113a6ed1"}
+2016-08-15 01:03:01 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:03:01 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/category.php?id=30> (referer: http://www.my_test_scrapy.com/ecshop)
+2016-08-15 01:03:01 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/category.php?id=9>
+{'link': 'http://www.my_test_scrapy.com/category.php?id=9'}
+2016-08-15 01:03:01 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/category.php?id=8>
+{'link': 'http://www.my_test_scrapy.com/category.php?id=8'}
+2016-08-15 01:03:01 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/category.php?id=4>
+{'link': 'http://www.my_test_scrapy.com/category.php?id=4'}
+2016-08-15 01:03:01 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/category.php?id=6>
+{'link': 'http://www.my_test_scrapy.com/category.php?id=6'}
+2016-08-15 01:03:01 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/category.php?id=1>
+{'link': 'http://www.my_test_scrapy.com/category.php?id=1'}
+2016-08-15 01:03:01 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/article.php?id=14>
+{'link': 'http://www.my_test_scrapy.com/article.php?id=14'}
+2016-08-15 01:03:01 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/category.php?id=3>
+{'link': 'http://www.my_test_scrapy.com/category.php?id=3'}
+2016-08-15 01:03:01 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/affiche.php?ad_id=1&amp;uri=>
+{'link': 'http://www.my_test_scrapy.com/affiche.php?ad_id=1&amp;uri='}
+2016-08-15 01:03:01 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/goods.php?id=69>
+{'link': 'http://www.my_test_scrapy.com/goods.php?id=69'}
+2016-08-15 01:03:01 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/goods.php?id=68>
+{'link': 'http://www.my_test_scrapy.com/goods.php?id=68'}
+2016-08-15 01:03:01 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/goods.php?id=64>
+{'link': 'http://www.my_test_scrapy.com/goods.php?id=64'}
+2016-08-15 01:03:01 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/goods.php?id=61>
+{'link': 'http://www.my_test_scrapy.com/goods.php?id=61'}
+2016-08-15 01:03:01 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/goods.php?id=63>
+{'link': 'http://www.my_test_scrapy.com/goods.php?id=63'}
+2016-08-15 01:03:01 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/goods.php?id=62>
+{'link': 'http://www.my_test_scrapy.com/goods.php?id=62'}
+2016-08-15 01:03:01 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/article.php?id=17>
+{'link': 'http://www.my_test_scrapy.com/article.php?id=17'}
+2016-08-15 01:03:01 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/affiche.php?ad_id=2&amp;uri=>
+{'link': 'http://www.my_test_scrapy.com/affiche.php?ad_id=2&amp;uri='}
+2016-08-15 01:03:01 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/user.php>
+{'link': 'http://www.my_test_scrapy.com/user.php'}
+2016-08-15 01:03:01 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/article.php?id=15>
+{'link': 'http://www.my_test_scrapy.com/article.php?id=15'}
+2016-08-15 01:03:01 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/article.php?id=12>
+{'link': 'http://www.my_test_scrapy.com/article.php?id=12'}
+2016-08-15 01:03:01 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/article.php?id=13>
+{'link': 'http://www.my_test_scrapy.com/article.php?id=13'}
+2016-08-15 01:03:01 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/article.php?id=10>
+{'link': 'http://www.my_test_scrapy.com/article.php?id=10'}
+2016-08-15 01:03:01 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/article.php?id=11>
+{'link': 'http://www.my_test_scrapy.com/article.php?id=11'}
+2016-08-15 01:03:01 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/themes/default/js>
+{'link': 'http://www.my_test_scrapy.com/themes/default/js'}
+2016-08-15 01:03:01 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/article.php?id=18>
+{'link': 'http://www.my_test_scrapy.com/article.php?id=18'}
+2016-08-15 01:03:01 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/article.php?id=19>
+{'link': 'http://www.my_test_scrapy.com/article.php?id=19'}
+2016-08-15 01:03:01 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/category.php?id=19>
+{'link': 'http://www.my_test_scrapy.com/category.php?id=19'}
+2016-08-15 01:03:01 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/category.php?id=16>
+{'link': 'http://www.my_test_scrapy.com/category.php?id=16'}
+2016-08-15 01:03:01 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/category.php?id=32>
+{'link': 'http://www.my_test_scrapy.com/category.php?id=32'}
+2016-08-15 01:03:01 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/flow.php>
+{'link': 'http://www.my_test_scrapy.com/flow.php'}
+2016-08-15 01:03:01 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/category.php?id=12>
+{'link': 'http://www.my_test_scrapy.com/category.php?id=12'}
+2016-08-15 01:03:01 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/themes/default/images>
+{'link': 'http://www.my_test_scrapy.com/themes/default/images'}
+2016-08-15 01:03:01 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/themes/default>
+{'link': 'http://www.my_test_scrapy.com/themes/default'}
+2016-08-15 01:03:01 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/feed.php>
+{'link': 'http://www.my_test_scrapy.com/feed.php'}
+2016-08-15 01:03:01 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/article.php?id=16>
+{'link': 'http://www.my_test_scrapy.com/article.php?id=16'}
+2016-08-15 01:03:01 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/goods.php?id=72>
+{'link': 'http://www.my_test_scrapy.com/goods.php?id=72'}
+2016-08-15 01:03:01 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/goods.php?id=70>
+{'link': 'http://www.my_test_scrapy.com/goods.php?id=70'}
+2016-08-15 01:03:01 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/user.php?act=register>
+{'link': 'http://www.my_test_scrapy.com/user.php?act=register'}
+2016-08-15 01:03:01 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/index.php>
+{'link': 'http://www.my_test_scrapy.com/index.php'}
+2016-08-15 01:03:01 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/category.php?id=18>
+{'link': 'http://www.my_test_scrapy.com/category.php?id=18'}
+2016-08-15 01:03:01 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/article.php?id=20>
+{'link': 'http://www.my_test_scrapy.com/article.php?id=20'}
+2016-08-15 01:03:01 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/js>
+{'link': 'http://www.my_test_scrapy.com/js'}
+2016-08-15 01:03:01 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/images/201605/thumb_img>
+{'link': 'http://www.my_test_scrapy.com/images/201605/thumb_img'}
+2016-08-15 01:03:01 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/article.php?id=9>
+{'link': 'http://www.my_test_scrapy.com/article.php?id=9'}
+2016-08-15 01:03:01 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/data/afficheimg>
+{'link': 'http://www.my_test_scrapy.com/data/afficheimg'}
+2016-08-15 01:03:01 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/category.php?id=28>
+{'link': 'http://www.my_test_scrapy.com/category.php?id=28'}
+2016-08-15 01:03:01 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/category.php?id=22>
+{'link': 'http://www.my_test_scrapy.com/category.php?id=22'}
+2016-08-15 01:03:01 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/category.php?id=29>
+{'link': 'http://www.my_test_scrapy.com/category.php?id=29'}
+2016-08-15 01:03:01 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/search.php>
+{'link': 'http://www.my_test_scrapy.com/search.php'}
+2016-08-15 01:03:01 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/category.php?id=20>
+{'link': 'http://www.my_test_scrapy.com/category.php?id=20'}
+2016-08-15 01:03:01 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/category.php?id=26>
+{'link': 'http://www.my_test_scrapy.com/category.php?id=26'}
+2016-08-15 01:03:01 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/category.php?id=27>
+{'link': 'http://www.my_test_scrapy.com/category.php?id=27'}
+2016-08-15 01:03:01 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/category.php?id=24>
+{'link': 'http://www.my_test_scrapy.com/category.php?id=24'}
+2016-08-15 01:03:01 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/category.php?id=25>
+{'link': 'http://www.my_test_scrapy.com/category.php?id=25'}
+2016-08-15 01:03:01 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/category.php?id=31>
+{'link': 'http://www.my_test_scrapy.com/category.php?id=31'}
+2016-08-15 01:03:01 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/category.php?id=30>
+{'link': 'http://www.my_test_scrapy.com/category.php?id=30'}
+2016-08-15 01:03:01 [scrapy] INFO: Closing spider (finished)
+2016-08-15 01:03:01 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 15818,
+ 'downloader/request_count': 56,
+ 'downloader/request_method_count/GET': 56,
+ 'downloader/response_bytes': 37917,
+ 'downloader/response_count': 56,
+ 'downloader/response_status_count/200': 56,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2016, 8, 14, 17, 3, 1, 464000),
+ 'item_scraped_count': 56,
+ 'log_count/DEBUG': 339,
+ 'log_count/INFO': 7,
+ 'log_count/WARNING': 1,
+ 'request_depth_max': 1,
+ 'response_received_count': 56,
+ 'scheduler/dequeued': 56,
+ 'scheduler/dequeued/memory': 56,
+ 'scheduler/enqueued': 56,
+ 'scheduler/enqueued/memory': 56,
+ 'start_time': datetime.datetime(2016, 8, 14, 17, 2, 56, 395000)}
+2016-08-15 01:03:01 [scrapy] INFO: Spider closed (finished)
+2016-08-15 01:05:35 [scrapy] INFO: Scrapy 1.1.1 started (bot: localhost)
+2016-08-15 01:05:35 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'localhost.spiders', 'DEPTH_LIMIT': 3, 'CONCURRENT_REQUESTS': 100, 'SPIDER_MODULES': ['localhost.spiders'], 'BOT_NAME': 'localhost', 'LOG_FILE': 'scrapy.log'}
+2016-08-15 01:05:35 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats']
+2016-08-15 01:05:35 [py.warnings] WARNING: C:\Users\Faith.Faith-PC\Desktop\scrapy-project\localhost\localhost\middleware.py:7: ScrapyDeprecationWarning: Module `scrapy.contrib.downloadermiddleware.useragent` is deprecated, use `scrapy.downloadermiddlewares.useragent` instead
+  from scrapy.contrib.downloadermiddleware.useragent import UserAgentMiddleware
+
+2016-08-15 01:05:38 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:2514/wd/hub/session {"requiredCapabilities": {}, "desiredCapabilities": {"phantomjs.page.settings.disk-cache": true, "javascriptEnabled": true, "phantomjs.page.settings.resourceTimeout": 1000, "phantomjs.page.customHeaders.Cookie": "", "phantomjs.page.settings.loadImages": false, "platform": "ANY", "browserName": "phantomjs", "version": ""}}
+2016-08-15 01:05:38 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:05:38 [scrapy] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'localhost.middleware.RotateUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats',
+ 'localhost.middleware.PageRresolution']
+2016-08-15 01:05:38 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2016-08-15 01:05:38 [scrapy] INFO: Enabled item pipelines:
+['localhost.pipelines.LocalhostPipeline']
+2016-08-15 01:05:38 [scrapy] INFO: Spider opened
+2016-08-15 01:05:38 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2016-08-15 01:05:38 [scrapy] DEBUG: Telnet console listening on 127.0.0.1:6023
+2016-08-15 01:05:38 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:2514/wd/hub/session/52eb08b0-6241-11e6-8f19-db226bc13765/url {"url": "http://www.my_test_scrapy.com/ecshop", "sessionId": "52eb08b0-6241-11e6-8f19-db226bc13765"}
+2016-08-15 01:05:51 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:05:51 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:2514/wd/hub/session/52eb08b0-6241-11e6-8f19-db226bc13765/source {"sessionId": "52eb08b0-6241-11e6-8f19-db226bc13765"}
+2016-08-15 01:05:51 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:05:51 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/ecshop> (referer: None)
+2016-08-15 01:05:51 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/ecshop>
+{'link': 'http://www.my_test_scrapy.com/ecshop'}
+2016-08-15 01:05:51 [scrapy] INFO: Closing spider (finished)
+2016-08-15 01:05:51 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 226,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 25416,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2016, 8, 14, 17, 5, 51, 665000),
+ 'item_scraped_count': 1,
+ 'log_count/DEBUG': 9,
+ 'log_count/INFO': 7,
+ 'log_count/WARNING': 1,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2016, 8, 14, 17, 5, 38, 707000)}
+2016-08-15 01:05:51 [scrapy] INFO: Spider closed (finished)
+2016-08-15 01:06:17 [scrapy] INFO: Scrapy 1.1.1 started (bot: localhost)
+2016-08-15 01:06:17 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'localhost.spiders', 'DEPTH_LIMIT': 3, 'CONCURRENT_REQUESTS': 100, 'SPIDER_MODULES': ['localhost.spiders'], 'BOT_NAME': 'localhost', 'LOG_FILE': 'scrapy.log'}
+2016-08-15 01:06:17 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats']
+2016-08-15 01:06:17 [py.warnings] WARNING: C:\Users\Faith.Faith-PC\Desktop\scrapy-project\localhost\localhost\middleware.py:7: ScrapyDeprecationWarning: Module `scrapy.contrib.downloadermiddleware.useragent` is deprecated, use `scrapy.downloadermiddlewares.useragent` instead
+  from scrapy.contrib.downloadermiddleware.useragent import UserAgentMiddleware
+
+2016-08-15 01:06:19 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:2582/wd/hub/session {"requiredCapabilities": {}, "desiredCapabilities": {"phantomjs.page.settings.disk-cache": true, "javascriptEnabled": true, "phantomjs.page.settings.resourceTimeout": 1000, "phantomjs.page.customHeaders.Cookie": "", "phantomjs.page.settings.loadImages": false, "platform": "ANY", "browserName": "phantomjs", "version": ""}}
+2016-08-15 01:06:19 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:06:20 [scrapy] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'localhost.middleware.RotateUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats',
+ 'localhost.middleware.PageRresolution']
+2016-08-15 01:06:20 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2016-08-15 01:06:20 [scrapy] INFO: Enabled item pipelines:
+['localhost.pipelines.LocalhostPipeline']
+2016-08-15 01:06:20 [scrapy] INFO: Spider opened
+2016-08-15 01:06:20 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2016-08-15 01:06:20 [scrapy] DEBUG: Telnet console listening on 127.0.0.1:6023
+2016-08-15 01:06:20 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:2582/wd/hub/session/6b8c4550-6241-11e6-a96b-c1c9fc087c3b/url {"url": "http://www.my_test_scrapy.com/ecshop/", "sessionId": "6b8c4550-6241-11e6-a96b-c1c9fc087c3b"}
+2016-08-15 01:06:32 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:06:32 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:2582/wd/hub/session/6b8c4550-6241-11e6-a96b-c1c9fc087c3b/source {"sessionId": "6b8c4550-6241-11e6-a96b-c1c9fc087c3b"}
+2016-08-15 01:06:32 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2016-08-15 01:06:32 [scrapy] DEBUG: Crawled (200) <GET http://www.my_test_scrapy.com/ecshop/> (referer: None)
+2016-08-15 01:06:32 [scrapy] DEBUG: Scraped from <200 http://www.my_test_scrapy.com/ecshop/>
+{'link': 'http://www.my_test_scrapy.com/ecshop/'}
+2016-08-15 01:06:32 [scrapy] INFO: Closing spider (finished)
+2016-08-15 01:06:32 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 227,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 25416,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2016, 8, 14, 17, 6, 32, 963000),
+ 'item_scraped_count': 1,
+ 'log_count/DEBUG': 9,
+ 'log_count/INFO': 7,
+ 'log_count/WARNING': 1,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2016, 8, 14, 17, 6, 20, 34000)}
+2016-08-15 01:06:32 [scrapy] INFO: Spider closed (finished)
